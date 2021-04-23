@@ -6,5 +6,4 @@ namePrefix: {{artifactId}}-
 commonLabels:
   app.kubernetes.io/name: {{artifactId}}
 resources:
-  - deployment.yaml
-  - service.yaml
+  - github.com/samarsinghal/spring-boot-web
