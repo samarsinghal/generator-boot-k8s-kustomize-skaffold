@@ -5,7 +5,7 @@ actions:
 apiVersion: skaffold/v2beta6
 kind: Config
 profiles:
-  - name: local
+  - name: dev
     build:
       artifacts:
         - image: samarsinghal/{{artifactId}}
@@ -17,12 +17,12 @@ profiles:
             builder: "cloudfoundry/cnb:cflinuxfs3"
       tagPolicy:
         sha256: {}
-      local:
-        push: false
+      # local:
+      #   push: false
     deploy:
       kustomize:
         paths:
-          - kubernetes/overlays/local
+          - kubernetes/overlays/dev
 #
 # Will be using k8s yaml files for services
 #
