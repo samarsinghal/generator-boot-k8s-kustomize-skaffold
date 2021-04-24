@@ -23,6 +23,26 @@ profiles:
       kustomize:
         paths:
           - kubernetes/overlays/local
+  - name: dev
+    build:
+      artifacts:
+        - image: samarsinghal/{{artifactId}}
+          # jib:
+          #   type: maven
+          #   args:
+          #     - -Plocal
+          buildpacks:
+            builder: "cloudfoundry/cnb:cflinuxfs3"
+      tagPolicy:
+        sha256: {}
+      # local:
+      #   push: false
+    deploy:
+      kustomize:
+        paths:
+          - kubernetes/overlays/dev
+
+
 #
 # Will be using k8s yaml files for services
 #
