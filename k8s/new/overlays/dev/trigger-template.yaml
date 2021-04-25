@@ -26,7 +26,7 @@ spec:
       - name: configGitUrl
         value: 'git@github.com:samarsinghal/argocd.git'
       - name: appImage
-        value: 'harbor.tanzudemo.frankcarta.com/spring-petclinic/spring-petclinic'
+        value: 'harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}'
       workspaces:
       - name: config-source
         emptyDir: {}

@@ -6,7 +6,7 @@ actions:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: coffee-testing-pipeline
+  name: {{artifactId}}
   namespace: argocd
 spec:
   destination:
@@ -15,7 +15,7 @@ spec:
   project: default
   source:
     path: pipeline
-    repoURL: https://github.com/sdaschner/coffee-testing-config.git
+    repoURL: https://github.com/samarsinghal/{{artifactId}}.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}

@@ -5,19 +5,17 @@ actions:
 apiVersion: kpack.io/v1alpha1
 kind: Image
 metadata:
-  name: spring-petclinic
-  # namespace: cf-workloads-staging
+  name: {{artifactId}}
 spec:
-  tag: harbor.tanzudemo.frankcarta.com/spring-petclinic/spring-petclinic
+  tag: harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}
   imageTaggingStrategy: BuildNumber
   failedBuildHistoryLimit: 10
   successBuildHistoryLimit: 10
   cacheSize: 2G
-  # serviceAccount: cc-kpack-registry-service-account
   builder:
     kind: ClusterBuilder
     name: base
   source:
     git:
-      url: https://github.com/samarsinghal/spring-petclinic.git
+      url: https://github.com/samarsinghal/{{artifactId}}.git
       revision: main
