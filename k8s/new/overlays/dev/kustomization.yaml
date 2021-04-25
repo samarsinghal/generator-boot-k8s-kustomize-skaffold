@@ -3,7 +3,7 @@ actions:
   to: kubernetes/overlays/dev/kustomization.yaml
 ---
 images:
-  - name: samarsinghal/spring-sample-app:1.0.0  #used for Kustomize matching
+  - name: repository-project/application:1.0.0  #used for Kustomize matching
     newName: samarsinghal/{{artifactId}}
     newTag: latest
 configMapGenerator:
@@ -14,6 +14,15 @@ configMapGenerator:
     envs:
       - env.properties
 resources:
+  - buildService/image.yaml                 
   - ../base
+  - application/application-ingress.yamk
+  - cd/argocd-app.yaml 
+  - ci/task-deploy.yaml
+  - ci/pipeline.yaml                         
+  - ci/serviceaccount.yaml        
+  - ci/trigger-template.yaml
+  - ci/eventlistener.yaml         
+  - ci/ingress-event-listner.yaml 
 patches:
-- deployment-patch.yaml
+- application/deployment-patch.yaml

@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{artifactId}}-ingress
+spec:
+  rules:
+  - host: {{artifactId}}.tanzudemo.frankcarta.com
+    http:
+      paths:
+      - backend:
+          serviceName: {{artifactId}}-service
+          servicePort: 80
