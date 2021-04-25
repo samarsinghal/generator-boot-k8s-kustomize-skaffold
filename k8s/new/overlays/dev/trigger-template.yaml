@@ -23,8 +23,10 @@ spec:
       params:
       - name: imageDigest
         value: $(tt.params.imageDigest)
+      - name: argo-app-name
+        value: {{artifactId}}
       - name: configGitUrl
-        value: 'git@github.com:samarsinghal/argocd.git'
+        value: 'git@github.com:samarsinghal/{{artifactId}}.git'
       - name: appImage
         value: 'harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}'
       workspaces:
