@@ -10,6 +10,8 @@ spec:
   params:
   - name: imageDigest
     description: The Image Digest
+  - name: argo-app-name
+    description: Project Name
   - name: configGitUrl
     description: The application config (GitOps) repository
   - name: appImage
