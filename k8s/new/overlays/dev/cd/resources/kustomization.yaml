@@ -2,6 +2,10 @@
 actions:
   to: kubernetes/overlays/dev/cd/resources/kustomization.yaml
 ---
+
+namePrefix: spring-petclinic-
+commonLabels:
+  app.kubernetes.io/name: spring-petclinic
 images:
   - name: repository-project/application:1.0.0  #used for Kustomize matching
     newName: samarsinghal/{{artifactId}}
@@ -14,7 +18,7 @@ configMapGenerator:
     envs:
       - ../../application/env.properties
 resources:
-  - ../../../base
+  - github.com/samarsinghal/spring-boot-web
 
 patches:
 - ../../application/deployment-patch.yaml
