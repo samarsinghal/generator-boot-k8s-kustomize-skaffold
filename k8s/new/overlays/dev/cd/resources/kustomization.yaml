@@ -18,7 +18,8 @@ configMapGenerator:
     envs:
       - ../../application/env.properties
 resources:
-  - github.com/samarsinghal/spring-boot-web
+  - deployment.yaml
+  - service.yaml
 
 patches:
 - ../../application/deployment-patch.yaml

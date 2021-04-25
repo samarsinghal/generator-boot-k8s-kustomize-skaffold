@@ -16,6 +16,11 @@ spec:
     path: kubernetes/overlays/dev/cd/resources
     repoURL: https://github.com/samarsinghal/{{artifactId}}-app.git
     targetRevision: HEAD
+    directory:
+      recurse: true
+      jsonnet: {}
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
 
