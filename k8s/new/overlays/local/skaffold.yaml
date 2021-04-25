@@ -24,19 +24,19 @@ profiles:
         paths:
           - kubernetes/overlays/local
   - name: dev
-    build:
-      artifacts:
-        - image: samarsinghal/{{artifactId}}
-          # jib:
-          #   type: maven
-          #   args:
-          #     - -Plocal
-          buildpacks:
-            builder: "cloudfoundry/cnb:cflinuxfs3"
-      tagPolicy:
-        sha256: {}
-      # local:
-      #   push: false
+    # build:
+    #   artifacts:
+    #     - image: samarsinghal/{{artifactId}}
+    #       # jib:
+    #       #   type: maven
+    #       #   args:
+    #       #     - -Plocal
+    #       buildpacks:
+    #         builder: "cloudfoundry/cnb:cflinuxfs3"
+    #   tagPolicy:
+    #     sha256: {}
+    #   # local:
+    #   #   push: false
     deploy:
       kustomize:
         paths:

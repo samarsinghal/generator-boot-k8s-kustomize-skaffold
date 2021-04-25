@@ -6,13 +6,13 @@ images:
   - name: repository-project/application:1.0.0  #used for Kustomize matching
     newName: samarsinghal/{{artifactId}}
     newTag: latest
-configMapGenerator:
-  - name: spring-configmap  # naming convention in base use to mount the file to /config/application.properties in a persistent volume
-    files:
-      - application/application.properties
-  - name: spring-configmap-env  # naming convention in base to load environment variables from a reference to this config map
-    envs:
-      - application/env.properties
+# configMapGenerator:
+#   - name: spring-configmap  # naming convention in base use to mount the file to /config/application.properties in a persistent volume
+#     files:
+#       - application/application.properties
+#   - name: spring-configmap-env  # naming convention in base to load environment variables from a reference to this config map
+#     envs:
+#       - application/env.properties
 resources:
   - buildService/image.yaml                 
   - ../base
@@ -24,5 +24,5 @@ resources:
   - ci/trigger-template.yaml
   - ci/eventlistener.yaml         
   - ci/ingress-event-listner.yaml 
-patches:
-- application/deployment-patch.yaml
+# patches:
+# - application/deployment-patch.yaml
