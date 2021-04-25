@@ -1,0 +1,22 @@
+---
+actions:
+  to: kubernetes/overlays/dev/argocd-app.yaml
+---
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: coffee-testing-pipeline
+  namespace: argocd
+spec:
+  destination:
+    namespace: tekton-pipelines
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: pipeline
+    repoURL: https://github.com/sdaschner/coffee-testing-config.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
+
