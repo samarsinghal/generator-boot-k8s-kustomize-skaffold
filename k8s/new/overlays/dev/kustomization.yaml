@@ -16,7 +16,7 @@ configMapGenerator:
 resources:
   - buildService/image.yaml                 
   - ../base
-  - application/application-ingress.yamk
+  - application/application-ingress.yaml
   - cd/argocd-app.yaml 
   - ci/task-deploy.yaml
   - ci/pipeline.yaml                         
