@@ -6,7 +6,7 @@ actions:
 kind: Service
 apiVersion: apps/v1
 metadata:
-  name: {{artifactId}}
+  name: {{artifactId}}-service
 spec:
   # type: LoadBalancer
   sessionAffinity: None

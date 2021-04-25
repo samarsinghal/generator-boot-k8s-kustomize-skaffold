@@ -2,14 +2,21 @@
 actions:
   to: kubernetes/overlays/dev/cd/resources/deployment.yaml
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{artifactId}}-app
+  labels:
+    app: {{artifactId}}-app
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: {{artifactId}}-app
   template:
+    metadata:
+      labels:
+        app: {{artifactId}}-app
     spec:
       containers:
         - name: app 
