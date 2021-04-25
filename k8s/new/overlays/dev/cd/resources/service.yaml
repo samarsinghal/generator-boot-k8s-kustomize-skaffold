@@ -1,12 +1,12 @@
 ---
 actions:
-  to: kubernetes/overlays/dev/cd/resources/dev/service.yaml
+  to: kubernetes/overlays/dev/cd/resources/service.yaml
 ---
 
 kind: Service
 apiVersion: apps/v1
 metadata:
-  name: service
+  name: {{artifactId}}
 spec:
   # type: LoadBalancer
   sessionAffinity: None

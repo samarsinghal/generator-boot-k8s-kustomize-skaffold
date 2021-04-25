@@ -1,19 +1,19 @@
 ---
 actions:
-  to: kubernetes/overlays/dev/cd/resources/dev/deployment.yaml
+  to: kubernetes/overlays/dev/cd/resources/deployment.yaml
 ---
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
+  name: {{artifactId}}-app
 spec:
   replicas: 1
   template:
     spec:
       containers:
         - name: app 
-          image: repository-project/application:1.0.0
+          image: harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
