@@ -3,12 +3,12 @@ actions:
   to: kubernetes/overlays/dev/cd/resources/kustomization.yaml
 ---
 
-namePrefix: spring-petclinic-
+namePrefix: {{artifactId}}-
 commonLabels:
-  app.kubernetes.io/name: spring-petclinic
+  app.kubernetes.io/name: {{artifactId}}
 images:
   - name: repository-project/application:1.0.0  #used for Kustomize matching
-    newName: samarsinghal/{{artifactId}}
+    newName: harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}
     newTag: latest
 configMapGenerator:
   - name: spring-configmap  # naming convention in base use to mount the file to /config/application.properties in a persistent volume

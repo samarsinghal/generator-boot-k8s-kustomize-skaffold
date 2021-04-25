@@ -17,7 +17,7 @@ resources:
   - buildService/image.yaml                 
   - ../base
   - application/application-ingress.yaml
-  - cd/argocd-app.yaml 
+  - cd/argocd-app.yaml
   - ci/task.yaml
   - ci/pipeline.yaml                         
   - ci/serviceaccount.yaml        
