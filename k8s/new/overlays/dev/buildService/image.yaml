@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/overlays/dev/image.yaml
+  to: kubernetes/overlays/dev/buildService/image.yaml
 ---
 apiVersion: kpack.io/v1alpha1
 kind: Image

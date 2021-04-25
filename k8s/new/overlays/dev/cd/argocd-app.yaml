@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/overlays/dev/argocd-app.yaml
+  to: kubernetes/overlays/dev/cd/argocd-app.yaml
 ---
 
 apiVersion: argoproj.io/v1alpha1

@@ -1,3 +1,7 @@
+---
+actions:
+  to: kubernetes/overlays/dev/application/application.properties
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
