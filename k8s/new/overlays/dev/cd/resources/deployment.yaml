@@ -5,18 +5,18 @@ actions:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{artifactId}}-app
+  name: {{artifactId}}
   labels:
-    app: {{artifactId}}-app
+    app: {{artifactId}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{artifactId}}-app
+      app: {{artifactId}}
   template:
     metadata:
       labels:
-        app: {{artifactId}}-app
+        app: {{artifactId}}
     spec:
       containers:
         - name: app 
