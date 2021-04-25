@@ -1,3 +1,8 @@
+---
+actions:
+  to: kubernetes/overlays/dev/cd/resources/service.yaml
+---
+
 kind: Service
 apiVersion: v1
 metadata:
