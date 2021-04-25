@@ -9,16 +9,16 @@ images:
 configMapGenerator:
   - name: spring-configmap  # naming convention in base use to mount the file to /config/application.properties in a persistent volume
     files:
-      - application.properties
+      - application/application.properties
   - name: spring-configmap-env  # naming convention in base to load environment variables from a reference to this config map
     envs:
-      - env.properties
+      - application/env.properties
 resources:
   - buildService/image.yaml                 
   - ../base
   - application/application-ingress.yaml
   - cd/argocd-app.yaml 
-  - ci/task-deploy.yaml
+  - ci/task.yaml
   - ci/pipeline.yaml                         
   - ci/serviceaccount.yaml        
   - ci/trigger-template.yaml
