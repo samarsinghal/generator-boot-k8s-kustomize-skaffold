@@ -1,7 +1,7 @@
-# ---
-# actions:
-#   to: kubernetes/overlays/dev/cd/resources/kustomization.yaml
-# ---
+---
+actions:
+  to: kubernetes/overlays/dev/cd/resources/kustomization.yaml
+---
 
 namePrefix: spring-petclinic-
 commonLabels:
