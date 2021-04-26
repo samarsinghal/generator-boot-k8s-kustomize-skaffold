@@ -3,13 +3,13 @@
 #   to: kubernetes/overlays/dev/cd/resources/kustomization.yaml
 # ---
 
-# namePrefix: {{artifactId}}-
-# commonLabels:
-#   app.kubernetes.io/name: {{artifactId}}
-# images:
-#   - name: repository-project/application:1.0.0  #used for Kustomize matching
-#     newName: harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}
-#     newTag: latest
+namePrefix: spring-petclinic-
+commonLabels:
+  app.kubernetes.io/name: spring-petclinic
+images:
+  - name: repository-project/application:1.0.0  #used for Kustomize matching
+    newName: harbor.tanzudemo.frankcarta.com/spring-petclinic/spring-petclinic
+    newTag: latest
 # configMapGenerator:
 #   - name: spring-configmap  # naming convention in base use to mount the file to /config/application.properties in a persistent volume
 #     files:
@@ -17,9 +17,16 @@
 #   - name: spring-configmap-env  # naming convention in base to load environment variables from a reference to this config map
 #     envs:
 #       - ../../application/env.properties
-# resources:
-#   - dev/deployment.yaml
-#   - dev/service.yaml
-
-# # patches:
-# # - ../../application/deployment-patch.yaml
+resources:
+  # - buildService/image.yaml                 
+  - github.com/samarsinghal/spring-boot-web
+  # - application/application-ingress.yaml
+  # - cd/argocd-app.yaml
+  # - ci/task.yaml
+  # - ci/pipeline.yaml                         
+  # - ci/serviceaccount.yaml        
+  # - ci/trigger-template.yaml
+  # - ci/eventlistener.yaml         
+  # - ci/ingress-event-listner.yaml 
+# patches:
+# - application/deployment-patch.yaml

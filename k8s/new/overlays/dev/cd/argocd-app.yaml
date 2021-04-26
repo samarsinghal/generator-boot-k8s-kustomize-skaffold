@@ -11,16 +11,16 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
+    namespace: default
   project: default
   source:
     path: kubernetes/overlays/dev/cd/resources
     repoURL: https://github.com/samarsinghal/{{artifactId}}-app.git
     targetRevision: HEAD
-    directory:
-      recurse: true
-      jsonnet: {}
+    # directory:
+    #   recurse: true
+    #   jsonnet: {}
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-
