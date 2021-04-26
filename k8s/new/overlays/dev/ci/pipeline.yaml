@@ -6,11 +6,12 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: build-deploy
+  namespace: tekton-pipelines
 spec:
   params:
   - name: imageDigest
     description: The Image Digest
-  - name: argo-app-name
+  - name: argoAppName
     description: Project Name
   - name: configGitUrl
     description: The application config (GitOps) repository
@@ -42,8 +43,8 @@ spec:
     params:
     - name: environment
       value: dev
-    - name: argo-app-name
-      value: $(params.argo-app-name)
+    - name: argoAppName
+      value: $(params.argoAppName)
     - name: configGitUrl
       value: $(params.configGitUrl)
     - name: appImage
@@ -78,7 +79,7 @@ spec:
   #   params:
   #   - name: environment
   #     value: production
-  #   - name: argo-app-name
+  #   - name: argoAppName
   #     value: coffee-testing-prod
   #   - name: configGitUrl
   #     value: $(params.configGitUrl)

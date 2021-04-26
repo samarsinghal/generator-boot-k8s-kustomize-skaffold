@@ -19,16 +19,16 @@ spec:
     spec:
       pipelineRef:
         name: build-deploy
-      serviceAccountName: pipeline
+      # serviceAccountName: pipeline
       params:
       - name: imageDigest
         value: $(tt.params.imageDigest)
-      - name: argo-app-name
-        value: {{artifactId}}
+      - name: argoAppName
+        value: spring-petclinic-argo
       - name: configGitUrl
-        value: 'git@github.com:samarsinghal/{{artifactId}}.git'
+        value: 'https://samarsinghal:Github1025@github.com/samarsinghal/spring-petclinic-app'
       - name: appImage
-        value: 'harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}'
+        value: 'harbor.tanzudemo.frankcarta.com/spring-petclinic/spring-petclinic'
       workspaces:
       - name: config-source
         emptyDir: {}
