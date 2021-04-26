@@ -17,5 +17,5 @@ spec:
     name: base
   source:
     git:
-      url: https://github.com/samarsinghal/{{artifactId}}.git
+      url: https://github.com/samarsinghal/{{artifactId}}-app.git
       revision: main
