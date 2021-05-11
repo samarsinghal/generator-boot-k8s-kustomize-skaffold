@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/overlays/dev/application/application-ingress.yaml
+  to: ../kubernetes/overlays/dev/application/application-ingress.yaml
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress

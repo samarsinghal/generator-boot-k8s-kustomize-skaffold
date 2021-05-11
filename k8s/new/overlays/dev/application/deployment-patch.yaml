@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/overlays/dev/application/deployment-patch.yaml
+  to: ../kubernetes/overlays/dev/application/deployment-patch.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
