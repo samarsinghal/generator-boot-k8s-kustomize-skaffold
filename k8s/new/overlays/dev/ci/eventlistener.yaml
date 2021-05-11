@@ -11,7 +11,7 @@ spec:
   serviceAccountName: tekton-github-triggers
   triggers:
   - name: harbor-listener
-    interceptors:
+    # interceptors:
     # - github:
     #     secretRef:
     #       secretName: github-trigger-secret
