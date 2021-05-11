@@ -8,6 +8,7 @@ metadata:
   name: {{artifactId}}
 spec:
   tag: harbor.tanzu.frankcarta.com/{{artifactId}}/{{artifactId}}
+  serviceAccount: {{artifactId}}-service-account
   imageTaggingStrategy: BuildNumber
   failedBuildHistoryLimit: 10
   successBuildHistoryLimit: 10
