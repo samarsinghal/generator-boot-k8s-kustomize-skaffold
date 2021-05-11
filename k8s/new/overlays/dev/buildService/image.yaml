@@ -1,6 +1,6 @@
 ---
 actions:
-  to: ../kubernetes/overlays/dev/buildService/image.yaml
+  to: kubernetes/overlays/dev/buildService/image.yaml
 ---
 apiVersion: kpack.io/v1alpha1
 kind: Image
@@ -20,4 +20,4 @@ spec:
     git:
       url: https://github.com/samarsinghal/{{artifactId}}-app.git
       revision: main
-    subPath: {{artifactId}}-app
+    # subPath: {{artifactId}}-app

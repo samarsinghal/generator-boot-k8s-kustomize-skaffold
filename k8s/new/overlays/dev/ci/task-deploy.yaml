@@ -1,6 +1,6 @@
 ---
 actions:
-  to: ../kubernetes/overlays/dev/ci/task.yaml
+  to: kubernetes/overlays/dev/ci/task.yaml
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task

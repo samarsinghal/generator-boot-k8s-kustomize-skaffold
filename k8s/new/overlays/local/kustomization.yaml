@@ -1,6 +1,6 @@
 ---
 actions:
-  to: ../kubernetes/overlays/local/kustomization.yaml
+  to: kubernetes/overlays/local/kustomization.yaml
 ---
 images:
   - name: repository-project/application:1.0.0  #used for Kustomize matching

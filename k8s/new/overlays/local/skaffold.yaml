@@ -22,7 +22,7 @@ profiles:
     deploy:
       kustomize:
         paths:
-          - ../kubernetes/overlays/local
+          - kubernetes/overlays/local
   - name: dev
     # build:
     #   artifacts:
@@ -40,7 +40,7 @@ profiles:
     deploy:
       kustomize:
         paths:
-          - ../kubernetes/overlays/dev
+          - kubernetes/overlays/dev
 
 
 #
@@ -50,7 +50,7 @@ profiles:
     deploy:
       kustomize:
         paths:
-          - ../kubernetes/overlays/local-services/mysql
+          - kubernetes/overlays/local-services/mysql
 #
 # Will be using Helm charts for services
 #

@@ -1,6 +1,6 @@
 ---
 actions:
-  to: ../kubernetes/overlays/dev/ci/eventlistener.yaml
+  to: kubernetes/overlays/dev/ci/eventlistener.yaml
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener

@@ -1,6 +1,6 @@
 # ---
 # actions:
-#   to: ../kubernetes/overlays/dev/cd/resources/service.yaml
+#   to: kubernetes/overlays/dev/cd/resources/service.yaml
 # ---
 
 # kind: Service
