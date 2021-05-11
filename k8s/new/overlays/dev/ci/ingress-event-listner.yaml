@@ -9,7 +9,7 @@ metadata:
   namespace: tekton-pipelines
 spec:
   rules:
-  - host: event-listner.tanzudemo.frankcarta.com
+  - host: event-listner.tanzu.frankcarta.com
     http:
       paths:
       - backend:

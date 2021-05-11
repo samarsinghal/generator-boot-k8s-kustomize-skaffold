@@ -7,7 +7,7 @@ kind: Image
 metadata:
   name: {{artifactId}}
 spec:
-  tag: harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}
+  tag: harbor.tanzu.frankcarta.com/{{artifactId}}/{{artifactId}}
   imageTaggingStrategy: BuildNumber
   failedBuildHistoryLimit: 10
   successBuildHistoryLimit: 10

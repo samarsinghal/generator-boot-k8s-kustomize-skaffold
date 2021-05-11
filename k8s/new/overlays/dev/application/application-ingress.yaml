@@ -8,7 +8,7 @@ metadata:
   name: {{artifactId}}-ingress
 spec:
   rules:
-  - host: {{artifactId}}-app.tanzudemo.frankcarta.com
+  - host: {{artifactId}}-app.tanzu.frankcarta.com
     http:
       paths:
       - backend:

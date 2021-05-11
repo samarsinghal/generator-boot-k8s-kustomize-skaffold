@@ -28,7 +28,7 @@ spec:
       - name: configGitUrl
         value: 'https://samarsinghal:Github1025@github.com/samarsinghal/spring-petclinic-app'
       - name: appImage
-        value: 'harbor.tanzudemo.frankcarta.com/spring-petclinic/spring-petclinic'
+        value: 'harbor.tanzu.frankcarta.com/spring-petclinic/spring-petclinic'
       workspaces:
       - name: config-source
         emptyDir: {}

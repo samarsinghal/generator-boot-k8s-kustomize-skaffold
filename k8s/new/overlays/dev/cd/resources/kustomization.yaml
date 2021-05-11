@@ -8,7 +8,7 @@ commonLabels:
   app.kubernetes.io/name: spring-petclinic
 images:
   - name: repository-project/application:1.0.0  #used for Kustomize matching
-    newName: harbor.tanzudemo.frankcarta.com/spring-petclinic/spring-petclinic
+    newName: harbor.tanzu.frankcarta.com/spring-petclinic/spring-petclinic
     newTag: latest
 # configMapGenerator:
 #   - name: spring-configmap  # naming convention in base use to mount the file to /config/application.properties in a persistent volume

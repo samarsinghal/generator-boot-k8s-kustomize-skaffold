@@ -20,7 +20,7 @@
 #     spec:
 #       containers:
 #         - name: app 
-#           image: harbor.tanzudemo.frankcarta.com/{{artifactId}}/{{artifactId}}:latest
+#           image: harbor.tanzu.frankcarta.com/{{artifactId}}/{{artifactId}}:latest
 #           imagePullPolicy: IfNotPresent
 #           ports:
 #             - containerPort: 8080
